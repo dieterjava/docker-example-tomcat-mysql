@@ -1,7 +1,9 @@
 # forked from dmulligan/docker-example-tomcat-mysql
 
 added fixed version 8.0 for mysql and related jdbc driver
+
 exposed port 3306 from mysql
+
 tested on play-with-docker
 
 A docker compose example project with a MySQL 8.0 and a Tomcat container linked together.
