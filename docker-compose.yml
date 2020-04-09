@@ -5,8 +5,8 @@ db:
     MYSQL_DATABASE: example_db
     MYSQL_USER: example_db_user
     MYSQL_PASSWORD: example_db_pass
-#  ports:
-#    - "3306:3306"
+  ports:
+    - "3306:3306"
   volumes:
    - ./db:/docker-entrypoint-initdb.d
 
@@ -24,4 +24,4 @@ web:
   links:
     - db
     
-    
+  
