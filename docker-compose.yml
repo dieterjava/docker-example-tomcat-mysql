@@ -1,5 +1,5 @@
 db:
-  image: mysql:latest
+  image: mysql:8.0
   environment:
     MYSQL_ROOT_PASSWORD: nimda
     MYSQL_DATABASE: example_db
@@ -14,7 +14,7 @@ web:
   image: tomcat:latest
   # Environment variables do not appear to be getting loaded the first time Tomcat starts!
   environment:
-    JDBC_URL: jdbc:mysql://db:3306/example_db?connectTimeout=0&amp;socketTimeout=0&amp;autoReconnect=true
+    JDBC_URL: jdbc:mysql://db:3306/example_db
     JDBC_USER: example_db_user
     JDBC_PASS: example_db_pass
   ports:
@@ -23,3 +23,5 @@ web:
    - ./tomcat/webapps:/usr/local/tomcat/webapps
   links:
     - db
+    
+    

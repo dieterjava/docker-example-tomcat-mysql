@@ -16,7 +16,7 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 				}
 			}
 		}
-		sb.append("\n"); 
+		sb.append("\n");
 	}
 	return sb.toString();
 }
@@ -31,13 +31,13 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 	// String showTables = "select from tab";
 
 	// For MySQL
-	Class.forName("com.mysql.cj.jdbc.Driver");
+	Class.forName("com.mysql.jdbc.Driver");
 	String showTables = "show tables";
 
 
-	String jdbcUrl = "jdbc:mysql://db:3306/example_db";
-	String jdbcUser = "example_db_user";
-	String jdbcPass = "example_db_pass";
+	String jdbcUrl = "jdbc:mysql://mysql:3306/mydb";
+	String jdbcUser = "root";
+	String jdbcPass = "admin";
 
 	java.sql.Connection conn = java.sql.DriverManager.getConnection(jdbcUrl, jdbcUser, jdbcPass);
 	if (conn != null) {
@@ -49,4 +49,4 @@ private String getResultSet(java.sql.ResultSet resultSet, boolean displayTables)
 		conn.close();
 	}
 
-%></pre></body></h
+%></pre></body></htm
